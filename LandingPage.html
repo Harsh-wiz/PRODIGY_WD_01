@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Modern Landing Page</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: "Arial", sans-serif;
         }
         body {
-            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
         }
         .hero {
             height: 100vh;
@@ -20,26 +21,31 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?technology,nature') no-repeat center center/cover;
             color: white;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            padding: 20px;
         }
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
         .hero p {
             font-size: 1.2rem;
+            max-width: 600px;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         .btn {
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 1.2rem;
             background: #ff6600;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
         }
         .btn:hover {
             background: #e65c00;
@@ -47,10 +53,14 @@
         .content {
             padding: 50px;
             text-align: center;
+            background: white;
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+            display: none;
         }
         .content h2 {
             font-size: 2rem;
             margin-bottom: 10px;
+            color: #ff6600;
         }
         .content p {
             font-size: 1.2rem;
@@ -64,18 +74,19 @@
 
     <div class="hero">
         <h1>Welcome to Our Website</h1>
-        <p>Your journey to amazing experiences starts here.</p>
+        <p>Your journey to amazing experiences starts here. We bring you the best solutions for all your needs.</p>
         <button class="btn" onclick="showMore()">Learn More</button>
     </div>
 
-    <div class="content" id="moreContent" style="display: none;">
+    <div class="content" id="moreContent">
         <h2>About Us</h2>
-        <p>We are dedicated to bringing you the best services and experiences. Join us today and explore amazing opportunities.</p>
+        <p>We are dedicated to delivering high-quality services and products that enhance your experience. Join us today and explore endless possibilities.</p>
     </div>
 
     <script>
         function showMore() {
             document.getElementById("moreContent").style.display = "block";
+            window.scrollTo({ top: document.getElementById("moreContent").offsetTop, behavior: "smooth" });
         }
     </script>
 
